@@ -1,0 +1,15 @@
+.centrado{
+  text-align: center;
+  font-size: 18px;
+}
+
+.contenedor{
+  width:25%;
+  margin-right: 50px;
+  margin-left: 50px;
+  border: 2px solid black;
+}
+
+.poster{
+  width: 100%
+}

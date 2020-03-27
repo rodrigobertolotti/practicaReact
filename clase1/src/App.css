@@ -1,0 +1,25 @@
+.titulo{
+  width: 300px;
+  border: 2px solid black;
+}
+
+.imagen{
+  width: 300px;
+}
+
+.tarjeta{
+  margin: 10px;
+  display: inline-block;
+}
+
+.App{
+  display: inline;
+}
+
+.bueno{
+  background-color: green;
+}
+
+.malo{
+  background-color: red;
+}
