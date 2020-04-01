@@ -3,40 +3,26 @@ import Axios from 'axios';
 
 class Tarjeta extends React.Component {
 
-    constructor(props){
-    super(props);
-    this.state = {
-        nombre: "",
-        rating: ""
+    constructor(props) {
+        super(props);
+        
     }
-
-}
-
-    componentDidMount() {
-        Axios.get('http://omdbapi.com/?apikey=93064b0b&t='+this.props.name)
-            .then(response => {
-                this.setState({
-                    nombre: response.data.Title,
-                    rating: response.data.imdbRating,
-                    imagen: response.data.Poster,
-                })
-            })
-    }
-
     render() {
         return (
-            <div>
-            <div className="contenedor">
-                <p className="centrado">{this.state.nombre}</p>
-            </div>
-            <div className="contenedor">
-                <p className="centrado">{this.state.rating}</p>
-            </div>
-            <div className="contenedor">
-                <img className="poster" src={this.state.imagen} alt=""></img>
-            </div>
+            <>
+                <div>
+                    <div className="contenedor">
+                        <p className="centrado">{`Titulo: ${this.props.data.Title}`}</p>
+                    </div>
+                    <div className="contenedor">
+                        <p className="centrado">{`Ranking: ${this.props.data.imdbRating}`}</p>
+                    </div>
+                    <div className="contenedor">
+                        <img className="poster" src={this.props.data.Poster} alt=""></img>
+                    </div>
 
-            </div>
+                </div>
+            </>
         )
     }
 }
